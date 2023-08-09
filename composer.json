@@ -1,15 +1,26 @@
 {
-    "name": "laravel/laravel",
+    "name": "richard-muvirimi/scrappy",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "Php web scrapper utilizing a different machine for the scrapping.",
+    "keywords": [
+        "scrapper"
+    ],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Richard Muvirimi",
+            "email": "richard@tyganeutronics.com",
+            "homepage": "https://richard.co.zw",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
-        "laravel/tinker": "^2.8"
+        "laravel/tinker": "^2.8",
+        "symfony/panther": "^2.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -18,7 +29,10 @@
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^7.0",
         "phpunit/phpunit": "^10.1",
-        "spatie/laravel-ignition": "^2.0"
+        "spatie/laravel-ignition": "^2.0",
+        "squizlabs/php_codesniffer": "^3.7",
+        "phpcompatibility/php-compatibility": "^9.3",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
     },
     "autoload": {
         "psr-4": {
@@ -58,8 +72,13 @@
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
-            "php-http/discovery": true
-        }
+            "php-http/discovery": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
+        "platform": {
+            "php": "8.1"
+        },
+        "process-timeout": 0
     },
     "minimum-stability": "stable",
     "prefer-stable": true
