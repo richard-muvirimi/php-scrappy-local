@@ -16,6 +16,9 @@ class Kernel extends ConsoleKernel
         $schedule->command('app:work-sites')
             ->everyFiveSeconds()
             ->withoutOverlapping(0.3);
+
+        $schedule->command('app:bdi')
+            ->dailyAt("12:00");
     }
 
     /**
