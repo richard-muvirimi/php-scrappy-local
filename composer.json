@@ -1,5 +1,5 @@
 {
-    "name": "richard-muvirimi/scrappy",
+    "name": "richard-muvirimi/scrappy-local",
     "type": "project",
     "description": "Php web scrapper utilizing a different machine for the scrapping.",
     "keywords": [
@@ -17,20 +17,20 @@
     "require": {
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.8",
-        "laravel/framework": "^10.31",
+        "laravel/framework": "^10.43",
         "laravel/sanctum": "^3.3",
-        "laravel/tinker": "^2.8",
+        "laravel/tinker": "^2.9",
         "symfony/panther": "^2.1"
     },
     "require-dev": {
         "dbrekelmans/bdi": "^1.1",
         "fakerphp/faker": "^1.23",
         "laravel/pint": "^1.13",
-        "laravel/sail": "^1.26",
+        "laravel/sail": "^1.27",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^7.10",
-        "phpunit/phpunit": "^10.4",
-        "spatie/laravel-ignition": "^2.3"
+        "phpunit/phpunit": "^10.5",
+        "spatie/laravel-ignition": "^2.4"
     },
     "autoload": {
         "psr-4": {
@@ -61,7 +61,8 @@
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+            "@bdi"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
